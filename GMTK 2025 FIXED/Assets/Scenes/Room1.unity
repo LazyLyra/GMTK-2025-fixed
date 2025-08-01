@@ -3804,12 +3804,24 @@ PrefabInstance:
       value: Valve
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3
+      value: 7.09
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.05
+      value: -2.527
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3842,6 +3854,10 @@ PrefabInstance:
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8818978749022562250, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_Materials.Array.data[0]
