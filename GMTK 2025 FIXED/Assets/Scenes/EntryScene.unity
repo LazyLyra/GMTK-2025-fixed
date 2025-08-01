@@ -2412,7 +2412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e321058c2ea3ec94aaed8c50faec911c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeTime: 8
+  changeTime: 4
   sceneName: Room1
 --- !u!1 &1436020398
 GameObject:
