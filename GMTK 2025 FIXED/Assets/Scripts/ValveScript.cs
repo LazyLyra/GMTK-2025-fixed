@@ -7,6 +7,7 @@ public class ValveScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject glowingValve;
     [SerializeField] private GameObject nonGlowingValve;
+    [SerializeField] private GameObject Rubbish;
 
     [Header("Variables")]
     [SerializeField] private float InteractionDist;
@@ -17,6 +18,7 @@ public class ValveScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        Rubbish = GameObject.FindGameObjectWithTag("Rubbish");
         var interactionManager = InteractionManager.instance;
         interactionManager.OnInteract += InteractionManager_OnInteract;
         Transform Child1 = transform.Find("SR");
@@ -60,6 +62,7 @@ public class ValveScript : MonoBehaviour
     }
     private void OpenValve()
     {
+        Direction = player.transform.position - transform.position;
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Direction, InteractionDist);
         if(hit.collider == null) 
         {
@@ -67,7 +70,22 @@ public class ValveScript : MonoBehaviour
         }
         if (hit.collider.CompareTag("Player"))
         {
-            OnOpenValve?.Invoke(this, EventArgs.Empty);
+            Vector3 PressureDir = Rubbish.transform.position - transform.position;
+            RaycastHit2D RubbishHit = Physics2D.Raycast(transform.position, PressureDir);
+            if(RubbishHit.collider == null)
+            {
+                return;
+            }
+            if(RubbishHit.collider.name == "Rubbish")
+            {
+                OnOpenValve?.Invoke(this, EventArgs.Empty);
+                isOpened = true;
+            }
+            else
+            {
+                //add UI text
+                Debug.Log("BLOCKED!");
+            }
         }
     }
 }

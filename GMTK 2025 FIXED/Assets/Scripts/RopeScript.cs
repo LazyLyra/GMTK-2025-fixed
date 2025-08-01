@@ -15,6 +15,7 @@ public class RopeScript : MonoBehaviour
     [SerializeField] private bool isCut = false;
     private Vector3 Direction;
 
+    public event EventHandler OnRopeCut;
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -68,7 +69,8 @@ public class RopeScript : MonoBehaviour
         }
         if (hit.collider.CompareTag("Player"))
         {
-            Debug.Log("Cut Rope");
+            OnRopeCut?.Invoke(this, EventArgs.Empty);
+            isCut = true;
         }
     }
 }

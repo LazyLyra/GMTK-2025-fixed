@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -965384219156155775}
   m_Layer: 0
   m_Name: Rubbish
-  m_TagString: Untagged
+  m_TagString: Rubbish
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -173,5 +173,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
   bc: {fileID: 0}
+  valve: {fileID: 0}
   valveScript: {fileID: 0}
-  upwardVelocity: 10
+  velocity: 10

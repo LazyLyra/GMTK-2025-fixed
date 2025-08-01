@@ -217,5 +217,6 @@ MonoBehaviour:
   player: {fileID: 0}
   glowingValve: {fileID: 0}
   nonGlowingValve: {fileID: 0}
-  InteractionDist: 1
+  Rubbish: {fileID: 0}
+  InteractionDist: 2
   isOpened: 0
