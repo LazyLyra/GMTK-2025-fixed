@@ -174,4 +174,4 @@ MonoBehaviour:
   rb: {fileID: 0}
   bc: {fileID: 0}
   valveScript: {fileID: 0}
-  upwardVelocity: 5
+  upwardVelocity: 10

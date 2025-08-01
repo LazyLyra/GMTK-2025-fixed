@@ -80,11 +80,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  JumpPower: 0
-  JumpTime: 0
+  JumpPower: 10
+  JumpTime: 0.2
   JumpTimer: 0
   IsJumping: 0
-  gravityAccel: 0
+  gravityAccel: 2
   initialGravity: 0
   Grounded: 0
   WhatIsGround:
