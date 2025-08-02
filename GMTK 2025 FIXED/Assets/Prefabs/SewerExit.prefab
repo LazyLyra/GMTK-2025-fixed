@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5666826374356131811}
   - component: {fileID: 7298675969414607519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 4650104040206946942}
   - component: {fileID: 3452764763549157038}
   - component: {fileID: 5456599974887633135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SewerExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}

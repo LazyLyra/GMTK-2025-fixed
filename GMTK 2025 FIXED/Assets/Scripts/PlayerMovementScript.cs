@@ -28,12 +28,14 @@ public class PlayerMovementScript : MonoBehaviour
     public BoxCollider2D BC;
     public Rigidbody2D RB;
     public Animator anim;
+    public PlayerSFXManager SFX;
     // Start is called before the first frame update
     void Start()
     {
         BC = GetComponent<BoxCollider2D>();
         RB = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        SFX = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSFXManager>();
 
         initialGravity = RB.gravityScale;
         IsJumping = false;
@@ -59,6 +61,7 @@ public class PlayerMovementScript : MonoBehaviour
         if (Input.GetAxisRaw("Horizontal") != 0 && Grounded)
         {
             anim.SetBool("Running", true);
+            
 
             anim.SetBool("Laying", false);
             anim.SetBool("Licking", false);
@@ -94,6 +97,7 @@ public class PlayerMovementScript : MonoBehaviour
             RB.velocity = new Vector2(RB.velocity.x, JumpPower);
             IsJumping = true;
             JumpTimer = 0;
+            SFX.PlaySound(1);
 
             anim.SetBool("Laying", false);
             anim.SetBool("Licking", false);

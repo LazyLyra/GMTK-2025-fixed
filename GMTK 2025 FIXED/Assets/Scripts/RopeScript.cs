@@ -9,6 +9,8 @@ public class RopeScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject glowingRope;
     [SerializeField] private GameObject nonGlowingRope;
+    public AudioSource AS;
+    public AudioClip cut;
 
     [Header("Variables")]
     [SerializeField] private float InteractionDist;
@@ -19,6 +21,7 @@ public class RopeScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        AS = GetComponent<AudioSource>();
         var interactionManager = InteractionManager.instance;
         interactionManager.OnInteract += InteractionManager_OnInteract;
         Transform Child1 = transform.Find("SR");
@@ -71,6 +74,7 @@ public class RopeScript : MonoBehaviour
         {
             OnRopeCut?.Invoke(this, EventArgs.Empty);
             isCut = true;
+            AS.PlayOneShot(cut);
         }
     }
 }
