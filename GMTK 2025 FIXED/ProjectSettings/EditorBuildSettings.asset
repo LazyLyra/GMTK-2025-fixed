@@ -32,5 +32,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room6.unity
     guid: 83247c45d99329246a15835206746108
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 4a5727844f937a343a79440b7f1b275a
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 542c7800ecc90d0408ef3a3328034c5f, type: 2}
