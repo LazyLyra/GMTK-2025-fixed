@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5580522965227555852}
   - component: {fileID: 5543042124547790237}
-  - component: {fileID: 8475064293593212033}
+  - component: {fileID: 5345011059570675726}
+  - component: {fileID: 3110481761560404243}
   m_Layer: 0
-  m_Name: BigRat
+  m_Name: Bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.964, y: -3.27, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -74,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f2aeeb2642ebe5f43af54de7c94996a4, type: 3}
+  m_Sprite: {fileID: 7013631516640934163, guid: b438465a32eb63243a7889eb1f400d29, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,7 +86,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &8475064293593212033
+--- !u!95 &5345011059570675726
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6543634695332225296}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd66b9cc4babdef4ebe33e24fbb92efc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &3110481761560404243
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,7 +143,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.64, y: 0.64}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -129,25 +151,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.0625, y: -0.5}
-      - {x: 0.15625, y: -0.375}
-      - {x: 0.234375, y: -0.46875}
-      - {x: 0.5, y: -0.4375}
-      - {x: 0.5, y: -0.34375}
-      - {x: 0.46875, y: 0.046875}
-      - {x: 0.5, y: 0.1875}
-      - {x: 0.5, y: 0.328125}
-      - {x: 0.359375, y: 0.453125}
-      - {x: 0.1875, y: 0.5}
-      - {x: -0.046875, y: 0.5}
-      - {x: -0.203125, y: 0.328125}
-      - {x: -0.078125, y: 0.28125}
-      - {x: -0.1875, y: 0.125}
-      - {x: -0.5164175, y: 0.1012125}
-      - {x: -0.5, y: -0.390625}
-      - {x: -0.453125, y: -0.5}
-      - {x: -0.3125, y: -0.5}
-      - {x: -0.25, y: -0.4375}
-      - {x: -0.21875, y: -0.484375}
-      - {x: -0.15625, y: -0.5}
+    - - {x: 0.049659643, y: 0.0527282}
+      - {x: -0.031226404, y: 0.04026587}
+      - {x: -0.096200906, y: -0.0074544605}
+      - {x: -0.09554391, y: -0.020800618}
+      - {x: -0.03293266, y: -0.06539634}
+      - {x: 0.011719765, y: -0.06547868}
+      - {x: 0.04500122, y: -0.028632108}
+      - {x: 0.07230054, y: -0.022192545}
+      - {x: 0.08291549, y: -0.0042519346}
   m_UseDelaunayMesh: 0
