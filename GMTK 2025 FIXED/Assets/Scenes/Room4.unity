@@ -5400,8 +5400,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3694941987464328104, guid: c8b5327e46ea8aa4fbad277cff39e4b9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1373271625267293451}
   m_SourcePrefab: {fileID: 100100000, guid: c8b5327e46ea8aa4fbad277cff39e4b9, type: 3}
+--- !u!1 &1373271625267293450 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694941987464328104, guid: c8b5327e46ea8aa4fbad277cff39e4b9, type: 3}
+  m_PrefabInstance: {fileID: 1373271625267293449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1373271625267293451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1373271625267293450}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190149f52ffb2904b9c9bfb0b4b45ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  target: {fileID: 0}
+  moveSpeed: 6
+  RadiusOfVision: 4
+  PlayerNear: 0
+  ReachPos: 0
 --- !u!1001 &4914060358484731806
 PrefabInstance:
   m_ObjectHideFlags: 0
