@@ -21,19 +21,24 @@ public class PlayerMovementScript : MonoBehaviour
     [SerializeField] float CheckRadius;
     public Transform childPos;
 
+    [Header("Direction")]
+    [SerializeField] bool IsFacingRight;
 
     [Header("References")]
     public BoxCollider2D BC;
     public Rigidbody2D RB;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         BC = GetComponent<BoxCollider2D>();
         RB = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         initialGravity = RB.gravityScale;
         IsJumping = false;
         JumpTimer = 0;
+        IsFacingRight = true;
     }
 
     // Update is called once per frame
@@ -42,11 +47,27 @@ public class PlayerMovementScript : MonoBehaviour
         Move();
         GroundCheck();
         Jump();
+
+        
     }
 
     private void Move()
     {
         RB.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * MoveSpeed, RB.velocity.y);
+        CheckFlip();
+
+        if (Input.GetAxisRaw("Horizontal") != 0 && Grounded)
+        {
+            anim.SetBool("Running", true);
+
+            anim.SetBool("Laying", false);
+            anim.SetBool("Licking", false);
+            anim.SetBool("Scratching", false);
+        }
+        else
+        {
+            anim.SetBool("Running", false);
+        }
     }
 
     private void GroundCheck()
@@ -58,6 +79,11 @@ public class PlayerMovementScript : MonoBehaviour
             IsJumping = false;
             JumpTimer = 0;
             RB.gravityScale = initialGravity;
+            anim.SetBool("Jumping", false);
+        }
+        else
+        {
+            anim.SetBool("Jumping", true);
         }
     }
 
@@ -68,6 +94,10 @@ public class PlayerMovementScript : MonoBehaviour
             RB.velocity = new Vector2(RB.velocity.x, JumpPower);
             IsJumping = true;
             JumpTimer = 0;
+
+            anim.SetBool("Laying", false);
+            anim.SetBool("Licking", false);
+            anim.SetBool("Scratching", false);
         }
 
         if (Input.GetKey(KeyCode.Space) && IsJumping)
@@ -92,5 +122,19 @@ public class PlayerMovementScript : MonoBehaviour
         }
 
 
+    }
+
+    private void CheckFlip()
+    {
+        if (IsFacingRight && Input.GetAxisRaw("Horizontal") < 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
+        }
+        else if (!IsFacingRight && Input.GetAxisRaw("Horizontal") > 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
+        }
     }
 }

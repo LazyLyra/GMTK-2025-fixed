@@ -44,6 +44,8 @@ GameObject:
   - component: {fileID: 6757407573358273488}
   - component: {fileID: 1271080526937593232}
   - component: {fileID: 6717388091670667253}
+  - component: {fileID: 7891392396209177710}
+  - component: {fileID: 3025952456596122909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -80,11 +82,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 5
-  JumpPower: 10
+  JumpPower: 7.5
   JumpTime: 0.2
   JumpTimer: 0
   IsJumping: 0
-  gravityAccel: 2
+  gravityAccel: 3
   initialGravity: 0
   Grounded: 0
   WhatIsGround:
@@ -94,6 +96,7 @@ MonoBehaviour:
   childPos: {fileID: 7116929694775989699}
   BC: {fileID: 0}
   RB: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!212 &6757407573358273488
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -218,3 +221,40 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!95 &7891392396209177710
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025063722310205937}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ca101942e12366e469f5d994ca50a138, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3025952456596122909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025063722310205937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114fadc40717d9f47a320b162982679a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  RB: {fileID: 0}
+  timer: 0
+  waitTime: 5
