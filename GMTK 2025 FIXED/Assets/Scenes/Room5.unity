@@ -3859,6 +3859,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2964557639991370314, guid: fd9aea5660199384bbc5577c0cb1a3dd, type: 3}
+      propertyPath: moveSpeed
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5580522965227555852, guid: fd9aea5660199384bbc5577c0cb1a3dd, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.964
@@ -4766,6 +4770,10 @@ PrefabInstance:
     - target: {fileID: 2200188279203147490, guid: 16c7336219bdd2741953d515bf303b28, type: 3}
       propertyPath: m_Name
       value: Breakable Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200188279203147490, guid: 16c7336219bdd2741953d515bf303b28, type: 3}
+      propertyPath: m_TagString
+      value: Door
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

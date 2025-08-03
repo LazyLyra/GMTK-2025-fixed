@@ -8,7 +8,6 @@ public class ButtonScript : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameObject player;
-    [SerializeField] private GameObject Rubbish;
 
     [Header("Variables")]
     [SerializeField] private bool isPressed = false;
@@ -20,8 +19,7 @@ public class ButtonScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        Rubbish = GameObject.FindGameObjectWithTag("Rubbish");
-        
+        Animator = GetComponent<Animator>();
 
     }
     private void OnCollisionEnter2D(Collision2D collision)
@@ -30,6 +28,7 @@ public class ButtonScript : MonoBehaviour
         if (collision.collider.CompareTag("Rat")){
             isPressed = true;
             Animator.SetBool(pressed, isPressed);
+            pressButton();
         }
     }
 

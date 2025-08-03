@@ -1,3 +1,4 @@
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
 using UnityEngine;
@@ -43,7 +44,7 @@ public class RatScript : MonoBehaviour
             animator.SetBool(near, PlayerNear);
             animator.SetBool(reached, ReachPos);
             moveToTarget();
-            if(targetDir.magnitude <= 0.05f)
+            if(targetDir.magnitude <= 1f)
             {
                 ReachPos = true;
             }
