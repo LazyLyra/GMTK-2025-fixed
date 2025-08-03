@@ -1,7 +1,5 @@
 using System.Collections;
-using Unity.Mathematics;
-using Unity.VisualScripting;
-using UnityEditor.Tilemaps;
+
 using UnityEngine;
 
 public class RatScript : MonoBehaviour

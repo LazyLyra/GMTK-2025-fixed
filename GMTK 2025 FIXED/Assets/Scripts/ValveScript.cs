@@ -13,6 +13,7 @@ public class ValveScript : MonoBehaviour
     public AudioSource AS;
     public AudioClip valveOpen;
     public AudioClip air;
+    public GameObject particles;
 
     [Header("Variables")]
     [SerializeField] private float InteractionDist;
@@ -75,6 +76,7 @@ public class ValveScript : MonoBehaviour
     {
         
         Direction = player.transform.position - transform.position;
+        Instantiate(particles, transform.position, Quaternion.Euler(0,0,0));
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Direction, InteractionDist);
         if(hit.collider == null) 
         {

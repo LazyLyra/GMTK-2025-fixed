@@ -33,6 +33,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Room6.unity
     guid: 83247c45d99329246a15835206746108
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 78e02ba74846a0b45a64fa77e93ff007
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 4a5727844f937a343a79440b7f1b275a
   m_configObjects:

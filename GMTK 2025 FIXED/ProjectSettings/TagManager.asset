@@ -12,6 +12,8 @@ TagManager:
   - Door
   - Timer
   - Death
+  - Reset
+  - Valve
   layers:
   - Default
   - TransparentFX

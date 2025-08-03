@@ -16,6 +16,8 @@ public class BatScript : MonoBehaviour
     [SerializeField] private GameObject breakEffectPrefab;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] GameObject exclaimationMark;
+    public AudioSource AS;
+    [SerializeField] AudioClip breakDoor;
 
     private float moveTimer = 0f;
     private float cooldownTimer = 0f;
@@ -25,6 +27,7 @@ public class BatScript : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        AS = GetComponent<AudioSource>();
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         IsFacingRight = true;
         Transform Child1 = transform.Find("!");
@@ -96,6 +99,7 @@ public class BatScript : MonoBehaviour
             if (breakEffectPrefab != null)
             {
                 Instantiate(breakEffectPrefab, collision.transform.position, Quaternion.identity);
+                AS.PlayOneShot(breakDoor);
             }
 
             Destroy(collision.gameObject);

@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
-    public int SaveCheckpoint;
+    
+
+    public ResetCheckScript RCS;
     // Start is called before the first frame update
     void Start()
     {
-        
+        RCS = GameObject.FindGameObjectWithTag("Reset").GetComponent<ResetCheckScript>();
     }
 
     // Update is called once per frame
@@ -17,7 +19,7 @@ public class GameOverScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            SceneManager.LoadScene(SaveCheckpoint);
+            SceneManager.LoadScene(RCS.checkpointIndex);
         }
     }
 }

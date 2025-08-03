@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 1288078802568182635}
   m_Layer: 0
   m_Name: Valve
-  m_TagString: Untagged
+  m_TagString: Valve
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -322,6 +322,7 @@ MonoBehaviour:
   AS: {fileID: 0}
   valveOpen: {fileID: 8300000, guid: e40fe1cf7c4fae3439c8f61d94ed2601, type: 3}
   air: {fileID: 8300000, guid: 058d941731ea1ca438d5b7b0a169d341, type: 3}
+  particles: {fileID: 4554766927737486702, guid: 36a7fe66fe424f24a8af72e78e2ac05b, type: 3}
   InteractionDist: 2
   isOpened: 0
 --- !u!82 &1288078802568182635

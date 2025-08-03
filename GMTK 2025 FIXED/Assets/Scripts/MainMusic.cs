@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMusic : MonoBehaviour
 {
@@ -17,7 +18,16 @@ public class MainMusic : MonoBehaviour
         {
             GameObject.Destroy(gameObject);
         }
+
+       
     }
 
-    
+    private void Update()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 9 || SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            GameObject.Destroy(gameObject);
+        }
+    }
+
 }
