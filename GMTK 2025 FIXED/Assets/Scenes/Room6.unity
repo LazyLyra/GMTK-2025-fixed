@@ -4747,7 +4747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1304318814612472845, guid: 146f3d0071a306e44a976836ac0b2c74, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.71
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 1304318814612472845, guid: 146f3d0071a306e44a976836ac0b2c74, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4784,6 +4784,10 @@ PrefabInstance:
     - target: {fileID: 8596592042850313773, guid: 146f3d0071a306e44a976836ac0b2c74, type: 3}
       propertyPath: m_Name
       value: Rope
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932271026411572276, guid: 146f3d0071a306e44a976836ac0b2c74, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

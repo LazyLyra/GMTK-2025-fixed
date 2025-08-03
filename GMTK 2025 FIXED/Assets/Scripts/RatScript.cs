@@ -1,3 +1,4 @@
+using System.Collections;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEditor.Tilemaps;
@@ -11,7 +12,7 @@ public class RatScript : MonoBehaviour
     [SerializeField] float RadiusOfVision = 4f;
     [SerializeField] bool PlayerNear =false;
     [SerializeField] bool ReachPos = false;
-
+    [SerializeField] GameObject exclaimationMark;
     [SerializeField] bool IsFacingRight;
 
     private const string reached = "ReachedPos";
@@ -24,7 +25,11 @@ public class RatScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Target");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
+        Transform Child1 = transform.Find("!");
+        if (Child1 != null)
+        {
+            exclaimationMark = Child1.gameObject;
+        }
         IsFacingRight = true;
     }
     private void Update()
@@ -34,14 +39,16 @@ public class RatScript : MonoBehaviour
         if (direction.magnitude <= RadiusOfVision)
         {
             RaycastHit2D Hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
+            Debug.Log(Hit.collider.name);
             if (Hit.collider == null)
             {
                 Debug.Log("collider is null");
                 return;
             }
-            if(Hit.collider.gameObject == player || direction.magnitude < RadiusOfVision)
+            if(Hit.collider.gameObject == player && direction.magnitude < RadiusOfVision)
             {
                 PlayerNear = true;
+                StartCoroutine(ShowExcalmationMark());
             }
         }
         if (PlayerNear && !ReachPos)
@@ -58,6 +65,12 @@ public class RatScript : MonoBehaviour
         
     }
 
+    private IEnumerator ShowExcalmationMark()
+    {
+        exclaimationMark.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        exclaimationMark.SetActive(false);
+    }
     void moveToTarget()
     {
         Vector3 moveDirection = target.transform.position - transform.position;

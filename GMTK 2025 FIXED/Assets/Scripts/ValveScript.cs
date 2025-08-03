@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class ValveScript : MonoBehaviour
@@ -7,6 +8,7 @@ public class ValveScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject glowingValve;
     [SerializeField] private GameObject nonGlowingValve;
+    [SerializeField] private GameObject Blocked;
     [SerializeField] private GameObject Rubbish;
     public AudioSource AS;
     public AudioClip valveOpen;
@@ -36,7 +38,11 @@ public class ValveScript : MonoBehaviour
         {
             glowingValve = Child2.gameObject;
         }
-
+        Transform Child3 = transform.Find("Blocked");
+        if (Child3 != null)
+        {
+            Blocked = Child3.gameObject; 
+        }
     }
 
     private void InteractionManager_OnInteract(object sender, System.EventArgs e)
@@ -91,11 +97,17 @@ public class ValveScript : MonoBehaviour
             }
             else
             {
-                //add UI text
-                Debug.Log("BLOCKED!");
+                StartCoroutine(DisplayBlockedText());
             }
 
             AS.PlayOneShot(air);
         }
+    }
+
+    private IEnumerator DisplayBlockedText()
+    {
+        Blocked.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        Blocked.SetActive(false);
     }
 }

@@ -15,6 +15,7 @@ public class BatScript : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject breakEffectPrefab;
     [SerializeField] private Rigidbody2D rb;
+    [SerializeField] GameObject exclaimationMark;
 
     private float moveTimer = 0f;
     private float cooldownTimer = 0f;
@@ -26,6 +27,11 @@ public class BatScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         if (rb == null) rb = GetComponent<Rigidbody2D>();
         IsFacingRight = true;
+        Transform Child1 = transform.Find("!");
+        if (Child1 != null)
+        {
+            exclaimationMark = Child1.gameObject;
+        }
     }
 
     private void Update()
@@ -55,12 +61,22 @@ public class BatScript : MonoBehaviour
             }
             else if (distanceToPlayer <= chaseDistance)
             {
-                isChasing = true;
-                moveTimer = moveDuration;
-                chaseDirection = (player.transform.position - transform.position).normalized;
-                rb.velocity = chaseDirection * moveSpeed;
-
-                CheckFlip();
+                RaycastHit2D Hit = Physics2D.Raycast(transform.position, player.transform.position - transform.position);
+                Debug.Log(Hit.collider.name);
+                if (Hit.collider == null)
+                {
+                    Debug.Log("collider is null");
+                    return;
+                }
+                if (Hit.collider.gameObject == player && distanceToPlayer < chaseDistance)
+                {
+                    isChasing = true;
+                    moveTimer = moveDuration;
+                    chaseDirection = (player.transform.position - transform.position).normalized;
+                    rb.velocity = chaseDirection * moveSpeed;
+                    StartCoroutine(ShowExcalmationMark());
+                    CheckFlip();
+                }
             }
         }
     }
@@ -85,7 +101,12 @@ public class BatScript : MonoBehaviour
             Destroy(collision.gameObject);
         }
     }
-
+    private IEnumerator ShowExcalmationMark()
+    {
+        exclaimationMark.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        exclaimationMark.SetActive(false);
+    }
     void CheckFlip()
     {
         if (IsFacingRight && rb.velocity.x < 0)
