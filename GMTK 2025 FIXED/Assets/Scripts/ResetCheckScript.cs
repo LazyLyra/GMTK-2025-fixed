@@ -21,6 +21,8 @@ public class ResetCheckScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timerScript = GameObject.FindGameObjectWithTag("Timer").GetComponent<TimerScript>();
+
         if (SceneManager.GetActiveScene().buildIndex >= 5)
         {
             checkpointIndex = 5;

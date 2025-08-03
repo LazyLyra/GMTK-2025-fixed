@@ -122,6 +122,114 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &129390304
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5358368189706698689, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_Name
+      value: TimerBar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873289223216374579, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+--- !u!114 &129390305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7962868492452192930, guid: ae92f5dc28d15844497212976d4a448d, type: 3}
+  m_PrefabInstance: {fileID: 129390304}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59ac8f8b2a14b145846de2258c1e738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &186332218 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 823878536248620642, guid: b057fbdb1f05b404f8060d62542d9f12, type: 3}
@@ -4628,6 +4736,10 @@ PrefabInstance:
       propertyPath: index
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9084745861107270517, guid: 807033da38b52c64c9fc5b7e2709d67c, type: 3}
+      propertyPath: timerScript
+      value: 
+      objectReference: {fileID: 129390305}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5814,3 +5926,4 @@ SceneRoots:
   - {fileID: 1237732511}
   - {fileID: 1396770093}
   - {fileID: 300744658}
+  - {fileID: 129390304}
