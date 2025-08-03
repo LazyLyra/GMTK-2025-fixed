@@ -10,6 +10,8 @@ TagManager:
   - Rat
   - Button
   - Door
+  - Timer
+  - Death
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ public class BatScript : MonoBehaviour
     [SerializeField] private float moveSpeed = 3f;
     [SerializeField] private float moveDuration = 3f;
     [SerializeField] private float cooldownDuration = 2f;
+    [SerializeField] bool IsFacingRight;
 
     [Header("References")]
     [SerializeField] private GameObject player;
@@ -24,6 +25,7 @@ public class BatScript : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         if (rb == null) rb = GetComponent<Rigidbody2D>();
+        IsFacingRight = true;
     }
 
     private void Update()
@@ -41,6 +43,8 @@ public class BatScript : MonoBehaviour
                 isChasing = false;
                 cooldownTimer = cooldownDuration;
                 rb.velocity = Vector2.zero;
+
+                
             }
         }
         else
@@ -55,6 +59,8 @@ public class BatScript : MonoBehaviour
                 moveTimer = moveDuration;
                 chaseDirection = (player.transform.position - transform.position).normalized;
                 rb.velocity = chaseDirection * moveSpeed;
+
+                CheckFlip();
             }
         }
     }
@@ -77,6 +83,20 @@ public class BatScript : MonoBehaviour
             }
 
             Destroy(collision.gameObject);
+        }
+    }
+
+    void CheckFlip()
+    {
+        if (IsFacingRight && rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
+        }
+        else if (!IsFacingRight && rb.velocity.x > 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
         }
     }
 }

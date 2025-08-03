@@ -9,6 +9,7 @@ public class DoorScript : MonoBehaviour
     [SerializeField] Vector3 ClosePos;
 
     public bool Opening;
+    [SerializeField] bool played;
 
     [Header("Movement")]
     [SerializeField] float MoveSpeed;
@@ -19,16 +20,21 @@ public class DoorScript : MonoBehaviour
     public GameObject OpenChild; //rmb to drag these
     public GameObject CloseChild;
     public ButtonScript buttonScript;
+    public AudioSource AS;
+    public AudioClip[] soundClips;
 
     // Start is called before the first frame update
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+        AS = GetComponent<AudioSource>();
         buttonScript = GameObject.FindGameObjectWithTag("Button").GetComponent<ButtonScript>();
         OpenPos = OpenChild.transform.position;
         ClosePos = CloseChild.transform.position;
         Opening = false;
         buttonScript.OnButtonPressed += ButtonScript_OnButtonPressed;
+
+        played = false;
     }
 
     private void ButtonScript_OnButtonPressed(object sender, System.EventArgs e)
@@ -44,10 +50,16 @@ public class DoorScript : MonoBehaviour
         if (Opening)
         {
             Open();
+            if (!played)
+            {
+                PlaySound();
+            }
         }
         else
         {
             Close();
+            
+
         }
     }
 
@@ -55,7 +67,7 @@ public class DoorScript : MonoBehaviour
     {
         Vector3 dir = OpenPos - transform.position;
         transform.position += dir * MoveSpeed * Time.deltaTime;
-
+        
     }
 
     public void Close()
@@ -63,6 +75,19 @@ public class DoorScript : MonoBehaviour
 
         Vector3 dir = ClosePos - transform.position;
         transform.position += dir * MoveSpeed * Time.deltaTime;
+        
 
+    }
+
+    void PlaySound()
+    {
+        played = true;
+
+        int choice = Random.Range(0, 3);
+     
+        AS.PlayOneShot(soundClips[choice]);
+
+        played = true;
+       
     }
 }

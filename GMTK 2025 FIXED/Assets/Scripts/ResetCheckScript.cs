@@ -7,11 +7,15 @@ public class ResetCheckScript : MonoBehaviour
 {
     public int checkpointIndex;
     public int lifeCounter;
+
+    public TimerScript timerScript;
     // Start is called before the first frame update
     void Awake()
     {  
         checkpointIndex = 2;
         DontDestroyOnLoad(gameObject);
+
+        timerScript = GameObject.FindGameObjectWithTag("Timer").GetComponent<TimerScript>();
     }
 
     // Update is called once per frame
@@ -26,6 +30,8 @@ public class ResetCheckScript : MonoBehaviour
 
         {
             SceneManager.LoadScene(checkpointIndex);
+            timerScript.ResetTimer();
+            LoseLife();
         }
     }
 

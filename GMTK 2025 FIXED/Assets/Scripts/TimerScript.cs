@@ -7,12 +7,14 @@ public class TimerScript : MonoBehaviour
 {
     public float floodTime;
     public float timer;
+    public DeathSequence DS;
     public Image image;
     // Start is called before the first frame update
     void Start()
     {
         timer = 0;
         image = GetComponent<Image>();
+        DS = GameObject.FindGameObjectWithTag("Death").GetComponent<DeathSequence>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,16 @@ public class TimerScript : MonoBehaviour
 
         if (timer >= floodTime)
         {
-            //lose
+            
+            
+            DS.Die();
+
+            GameObject.Destroy(gameObject);
         }
+    }
+    
+    public void ResetTimer()
+    {
+        timer = 0;
     }
 }

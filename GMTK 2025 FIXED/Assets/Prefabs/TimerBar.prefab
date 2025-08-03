@@ -192,7 +192,7 @@ GameObject:
   - component: {fileID: 7962868492452192930}
   m_Layer: 5
   m_Name: Filling
-  m_TagString: Untagged
+  m_TagString: Timer
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,4 +268,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floodTime: 30
   timer: 0
+  DS: {fileID: 0}
   image: {fileID: 0}

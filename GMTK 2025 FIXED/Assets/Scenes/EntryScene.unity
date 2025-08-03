@@ -223,16 +223,28 @@ PrefabInstance:
       value: Valve
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3
+      value: 2.82
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.05
+      value: -2.53
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.86
       objectReference: {fileID: 0}
     - target: {fileID: 7630908808529814891, guid: 1333b3397e72a8341be06108e1faa7e8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1048,7 +1060,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -4, z: 0}
+  - first: {x: 2, y: -4, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1118,7 +1130,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -3, z: 0}
+  - first: {x: 2, y: -3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1188,7 +1200,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -2, z: 0}
+  - first: {x: 2, y: -2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1258,7 +1270,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: -1, z: 0}
+  - first: {x: 2, y: -1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1328,7 +1340,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 0, z: 0}
+  - first: {x: 2, y: 0, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1398,7 +1410,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 1, z: 0}
+  - first: {x: 2, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1468,7 +1480,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 2, z: 0}
+  - first: {x: 2, y: 2, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -1538,7 +1550,7 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 7, y: 3, z: 0}
+  - first: {x: 2, y: 3, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 14
@@ -2139,6 +2151,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionBlock
       objectReference: {fileID: 0}
+    - target: {fileID: 3311770316645688301, guid: 807033da38b52c64c9fc5b7e2709d67c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6896816837752593056, guid: 807033da38b52c64c9fc5b7e2709d67c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -2272,6 +2288,10 @@ PrefabInstance:
     - target: {fileID: 6370700863970286629, guid: 4d5cf89472fd7fe4b83c9c0028da912a, type: 3}
       propertyPath: m_Name
       value: SewerExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370700863970286629, guid: 4d5cf89472fd7fe4b83c9c0028da912a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

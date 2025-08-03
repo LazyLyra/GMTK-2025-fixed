@@ -9,7 +9,7 @@ public class FloodingScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0, -1100, 0);
+        transform.position = new Vector3(0, -9, transform.position.z);
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class FloodingScript : MonoBehaviour
     {
         if (transform.position.y < finalPosition.y)
         {
-            transform.position += new Vector3(0, moveSpeed, 0);
+            transform.position += new Vector3(0, moveSpeed, 0) * Time.deltaTime;
         }
         
         

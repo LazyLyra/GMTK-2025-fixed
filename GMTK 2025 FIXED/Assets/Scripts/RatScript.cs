@@ -11,6 +11,9 @@ public class RatScript : MonoBehaviour
     [SerializeField] float RadiusOfVision = 4f;
     [SerializeField] bool PlayerNear =false;
     [SerializeField] bool ReachPos = false;
+
+    [SerializeField] bool IsFacingRight;
+
     private const string reached = "ReachedPos";
     private const string near = "PlayerNear";
     private Rigidbody2D rb;
@@ -21,6 +24,8 @@ public class RatScript : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("Target");
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        IsFacingRight = true;
     }
     private void Update()
     {
@@ -49,11 +54,30 @@ public class RatScript : MonoBehaviour
                 ReachPos = true;
             }
         }
+
+        
     }
 
     void moveToTarget()
     {
         Vector3 moveDirection = target.transform.position - transform.position;
         rb.velocity = moveDirection.normalized * moveSpeed;
+
+        CheckFlip();
+
+    }
+
+    void CheckFlip()
+    {
+        if (IsFacingRight && rb.velocity.x < 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
+        }
+        else if (!IsFacingRight && rb.velocity.x > 0) 
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            IsFacingRight = !IsFacingRight;
+        }
     }
 }
